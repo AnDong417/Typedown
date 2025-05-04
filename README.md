@@ -62,8 +62,18 @@ Then select the platform you want to build on (x64, x86, or arm64) and click Run
 
 ![20240319232529_rec_](https://github.com/byxiaozhi/Typedown/assets/31278216/50ef6e56-b177-49b0-b361-83659d25a40e)
 
-### Contributors
-
-Want to contribute to this project? Let us know with an [issue](https://github.com/byxiaozhi/Typedown/issues) that communicates your intent to create a [pull request](https://github.com/byxiaozhi/Typedown/pulls).
-
 Now, let's start!
+
+Typedown 本地部署问题解决：
+
+Typedown.Core项目名称如果显示已卸载，需要右键选择已安装的Windows SDK版本，来生成Windows应用程序。
+
+> The Windows SDK (10.0.26100) for Windows 11 provides the latest headers, libraries, metadata, and tools for building Windows applications. Use this SDK to build Universal Windows Platform (UWP) and Win32 applications for Windows 11, version 24H2 and previous Windows releases.
+
+如果没有可用的Windows SDK，打开Visual Studio Installer，在单个组件中选择安装Windows 11 SDK(10.0.22000.0)或其他版本，同时需要确保.NET Core 3.1组件已安装；
+
+如果问题依然存在，在微软官网手动下载安装。
+
+[Windows SDK - Windows app development | Microsoft Developer](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/#release-notes-and-known-issues)
+
+运行项目时，推荐选择Debug_Local模式。
